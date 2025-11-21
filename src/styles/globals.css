@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #C9A227;
+    --black: #0B0B0B;
+    --white: #FFFFFF;
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --error: #EF4444;
+    --neutral-light: #E5E7EB;
+    --neutral-dark: #2A2A2A;
+    
+    --background: var(--black);
+    --foreground: var(--white);
+    --card: #1A1A1A;
+    --card-foreground: var(--white);
+    --primary: var(--gold);
+    --primary-foreground: var(--black);
+    --border: var(--neutral-dark);
+    
+    --radius: 0.75rem;
+  }
+
+  .light {
+    --background: var(--white);
+    --foreground: var(--black);
+    --card: #F9FAFB;
+    --card-foreground: var(--black);
+    --primary: var(--gold);
+    --primary-foreground: var(--black);
+    --border: var(--neutral-light);
+  }
+
+  * {
+    @apply border-[var(--border)];
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 20pt;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 18pt;
+  }
+
+  p {
+    font-size: 14pt;
+  }
+
+  button {
+    font-weight: 500;
+    font-size: 16pt;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
